@@ -50,9 +50,11 @@ export default {
       }
       .album-title{
         margin: 10px 0;
+        font-weight: bold;
+        font-size: 15px;
       }
       .album-info{
-        font-size: 12px;
+        font-size: 13px;
         color: #ccc
       }
     }
