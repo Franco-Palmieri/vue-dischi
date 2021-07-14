@@ -7,9 +7,10 @@
 </template>
 
 <script>
+import axios from "axios"
 import Header from "./components/Header.vue"
 import Main from "./components/Main.vue"
-import axios from "axios"
+
 
 export default {
   name: 'App',
@@ -24,7 +25,7 @@ export default {
   },
   created (){
     axios.get("https://flynn.boolean.careers/exercises/api/array/music").then((result) =>{
-      this.albums = result.data.reponse;
+      this.albums = result.data.response;
     })
   }
 }
