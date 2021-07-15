@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header />
+    <Header @search="searchText"/>
     <!-- Invio props albums al main -->
     <Main :albums="albums"/>
   </div>
@@ -27,6 +27,14 @@ export default {
     axios.get("https://flynn.boolean.careers/exercises/api/array/music").then((result) =>{
       this.albums = result.data.response;
     })
+  },
+  computed: {
+  },
+  methods: {
+    searchAlbums(searchText){
+      alert(searchText)
+      console.log(searchText)
+    }
   }
 }
 </script>

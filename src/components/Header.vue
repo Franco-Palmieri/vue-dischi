@@ -6,6 +6,7 @@
       <div class="input-search">
         <input type="text" placeholder="Search" v-model="searchText">
         <button @click="$emit('search', searchText)">Search</button>
+        <!-- Quando clicca il bottone l'input invia il search all'app.vue attraverso l'emit -->
       </div>
     </div>
 </template>
@@ -20,7 +21,7 @@ export default {
     return {
       searchText: "",
     }
-  }
+  },
 }
 </script>
 
