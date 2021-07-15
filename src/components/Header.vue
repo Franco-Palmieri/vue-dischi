@@ -3,6 +3,10 @@
       <div class="logo">
         <img src="../assets/spotify-logo.png" alt="">
       </div>
+      <div class="input-search">
+        <input type="text" placeholder="Search" v-model="searchText">
+        <button @click="$emit('search', searchText)">Search</button>
+      </div>
     </div>
 </template>
 
@@ -11,6 +15,11 @@
 export default {
   name: 'Header',
   components: {
+  },
+  data(){
+    return {
+      searchText: "",
+    }
   }
 }
 </script>
@@ -21,6 +30,7 @@ export default {
   background-color: rgb(47, 47, 85);
   display: flex;
   align-items: center;
+  justify-content: space-between;
   .logo{
     display: flex;
     align-items: center;
